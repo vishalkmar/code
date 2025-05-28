@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   FaPenNib, FaBlogger, FaNewspaper, FaVideo, FaFileAlt,
-  FaPhotoVideo, FaSearch, FaQuoteRight, FaPodcast, FaBullhorn
+  FaPhotoVideo, FaQuoteRight, FaPodcast, FaBullhorn
 } from 'react-icons/fa';
 import {
   SiGrammarly, SiSemrush, SiGoogleanalytics, SiSurveymonkey,
