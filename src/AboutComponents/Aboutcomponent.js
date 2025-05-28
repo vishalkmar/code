@@ -244,12 +244,12 @@ const AboutSecondSection = () => {
                       className="img-fluid w-100 h-100 object-fit-cover"
                       style={{
                         transition: 'filter 0.3s ease',
-                        filter: hoveredImage === image.id ? 'brightness(0.8)' : 'brightness(1)'
+                        // filter: hoveredImage === image.id ? 'brightness(0.8)' : 'brightness(1)'
                       }}
                     />
                     <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style={{
                       background: 'rgba(0, 0, 0, 0.5)',
-                      opacity: hoveredImage === image.id ? 1 : 0,
+                      // opacity: hoveredImage === image.id ? 1 : 0,
                       transition: 'opacity 0.3s ease'
                     }}>
                       <span className="text-white">View Project</span>
