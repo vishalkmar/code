@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useMemo} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import socialbanner from '../../serviceImages/software/socialmedia.jpg'; // Update this path if needed
 
@@ -8,7 +8,7 @@ const HeroSocialMediaBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const texts = [
+  const texts = useMemo(() => [
     "Social Media Strategy",
     "Creative Content Campaigns",
     "Brand Awareness Boost",
@@ -19,7 +19,8 @@ const HeroSocialMediaBanner = () => {
     "Influencer Collaborations",
     "Community Management",
     "Social Analytics & Reporting"
-  ];
+    ], []);
+
 
   useEffect(() => {
     const handleTyping = () => {

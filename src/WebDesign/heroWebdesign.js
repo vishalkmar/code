@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useMemo } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import webdesignbanner from '../serviceImages/software/webdesign.jpg'; // Replace with your actual Web Design banner image path
 
@@ -8,8 +8,8 @@ const HeroWebDesignBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const texts = [
-    "Responsive Website Design",
+  const texts = useMemo(() => [
+ "Responsive Website Design",
     "Landing Pages That Convert",
     "SEO-Friendly Layouts",
     "Clean & Modern Interfaces",
@@ -19,7 +19,7 @@ const HeroWebDesignBanner = () => {
     "Custom Theme Development",
     "User-Centered Design",
     "Mobile-Optimized Sites"
-  ];
+], []);
 
   useEffect(() => {
     const handleTyping = () => {

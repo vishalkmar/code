@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useMemo } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import webdevimage from '../serviceImages/software/webdevelopment.jpg'
 
@@ -8,8 +8,9 @@ const HeroBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
   
-const texts = [
-  "Custom Web Applications",
+
+const texts = useMemo(() => [
+ "Custom Web Applications",
   "Responsive Website Design",
   "Full Stack Development",
   "Enterprise-Grade Solutions",
@@ -17,7 +18,7 @@ const texts = [
   "Next.js & React Experts",
   "Modern UI/UX Experiences",
   "Digital Solutions that Convert"
-];
+], []);
 
 
   useEffect(() => {

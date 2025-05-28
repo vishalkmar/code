@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useMemo } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import softwarebanner from  '../serviceImages/software/banner.jpg' 
 const HeroSoftwareBanner= () => {
@@ -7,8 +7,9 @@ const HeroSoftwareBanner= () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
   
-const texts = [
-  "Custom Software Solutions",
+
+    const texts = useMemo(() => [
+    "Custom Software Solutions",
   "Full Stack Application Development",
   "Robust Backend Architecture",
   "Scalable Cloud-Based Systems",
@@ -18,7 +19,7 @@ const texts = [
   "Enterprise Software Development",
   "Performance-Driven Engineering",
   "Secure & Compliant Codebases"
-];
+  ], []);
 
 
   useEffect(() => {

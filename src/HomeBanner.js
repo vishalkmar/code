@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HomeBanner = () => {
@@ -7,12 +8,20 @@ const HomeBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
   
-  const texts = [
-    "Software Solutions",
+  // const texts = [
+  //   "Software Solutions",
+  //   "Web Development",
+  //   "Mobile Apps",
+  //   "Digital Marketing"
+  // ];
+
+  const texts = useMemo(() => [
+  "Software Solutions",
     "Web Development",
     "Mobile Apps",
     "Digital Marketing"
-  ];
+], []);
+
 
   useEffect(() => {
     const handleTyping = () => {

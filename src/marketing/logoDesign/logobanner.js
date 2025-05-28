@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useMemo} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logobanner from '../../serviceImages/software/logodesign.jpg'; // Make sure the image path is correct
 
@@ -8,8 +8,8 @@ const HeroLogoBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const texts = [
-    "Creative Logo Designs",
+      const texts = useMemo(() => [
+     "Creative Logo Designs",
     "Brand Identity Solutions",
     "Minimal & Timeless Logos",
     "Custom Vector Creations",
@@ -19,7 +19,7 @@ const HeroLogoBanner = () => {
     "High-Impact Logo Concepts",
     "Logo Revamp & Redesign",
     "Versatile Branding Assets"
-  ];
+    ], []);
 
   useEffect(() => {
     const handleTyping = () => {

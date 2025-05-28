@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useMemo} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import uiuxbanner from '../serviceImages/software/uiuxbannertwo.js.jpg'; // Replace with your actual UI/UX banner image path
 
@@ -8,7 +8,7 @@ const HeroUIUXBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const texts = [
+    const texts = useMemo(() => [
     "User-Centered Design",
     "Wireframes & Prototypes",
     "Intuitive User Interfaces",
@@ -19,7 +19,7 @@ const HeroUIUXBanner = () => {
     "Accessibility Compliance",
     "Design Thinking Methodology",
     "Seamless User Experiences"
-  ];
+  ], []);
 
   useEffect(() => {
     const handleTyping = () => {

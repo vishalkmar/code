@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useMemo} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import contentbanner from '../../serviceImages/software/contentmarketing.jpg'; // Update with actual image path
 
@@ -8,8 +8,8 @@ const HeroContentMarketingBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const texts = [
-    "Engaging Blog Content",
+    const texts = useMemo(() => [
+   "Engaging Blog Content",
     "SEO-Driven Articles",
     "Creative Copywriting",
     "Content Strategy Development",
@@ -19,8 +19,7 @@ const HeroContentMarketingBanner = () => {
     "Email Newsletter Copy",
     "Brand Storytelling Experts",
     "Conversion-Focused Writing"
-  ];
-
+  ], []);
   useEffect(() => {
     const handleTyping = () => {
       const current = loopNum % texts.length;

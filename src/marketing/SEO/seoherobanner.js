@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useMemo } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import seobanner from '../../serviceImages/software/seo.jpg'; // Update the path if needed
 
@@ -8,7 +8,7 @@ const HeroSEOBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const texts = [
+  const texts = useMemo(() => [
     "Search Engine Optimization",
     "Rank Higher on Google",
     "On-Page SEO Expertise",
@@ -19,7 +19,8 @@ const HeroSEOBanner = () => {
     "Keyword Research & Targeting",
     "Content That Ranks",
     "Conversion-Driven SEO"
-  ];
+    ], []);
+
 
   useEffect(() => {
     const handleTyping = () => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useMemo} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import digitalmarketingbanner from '../../serviceImages/software/digitalmarketing.jpg'; // Update with your digital marketing banner image path
 
@@ -8,8 +8,9 @@ const HeroDigitalMarketingBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const texts = [
-    "SEO & SEM Strategies",
+  
+      const texts = useMemo(() => [
+     "SEO & SEM Strategies",
     "Social Media Campaigns",
     "Content Marketing Experts",
     "Pay-Per-Click Advertising",
@@ -19,7 +20,7 @@ const HeroDigitalMarketingBanner = () => {
     "Lead Generation Tactics",
     "ROI-Focused Campaigns",
     "Multi-Channel Marketing"
-  ];
+    ], []);
 
   useEffect(() => {
     const handleTyping = () => {
