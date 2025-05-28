@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaMobileAlt, FaCode, FaServer, FaPaintBrush, FaRocket, FaShieldAlt } from 'react-icons/fa';
+import { FaMobileAlt, FaCode, FaRocket, FaShieldAlt } from 'react-icons/fa';
 import showcase from '../serviceImages/app/apptwo.jpg'
 const AppDevelopmentShowcase = () => {
   return (

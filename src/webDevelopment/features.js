@@ -6,11 +6,11 @@ import payment from '../serviceImages/webdevelopment/payment.webp'
 import speed from '../serviceImages/webdevelopment/speed.png'
 import security from '../serviceImages/webdevelopment/security.webp'
 
-import { useNavigate } from 'react-router-dom';
+
 
 const FeatureSection = () => {
 
-  const navigate = useNavigate();
+
  const services = [
   {
     id: 1,

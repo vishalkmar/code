@@ -121,11 +121,11 @@ const TeamSection = () => {
                   <h5 className="text-white mb-2">{member.name}</h5>
                   <p className="text-white-50 small mb-3">{member.role}</p>
                   <p className="text-white mb-4">{member.bio}</p>
-                  <div className="d-flex justify-content-center">
+                  {/* <div className="d-flex justify-content-center">
                     <a href="#" className="text-white mx-2"><FaLinkedin /></a>
                     <a href="#" className="text-white mx-2"><FaTwitter /></a>
                     <a href="#" className="text-white mx-2"><FaGithub /></a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
