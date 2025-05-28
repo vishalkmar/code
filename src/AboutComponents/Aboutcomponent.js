@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaRocket, FaUsers, FaChartLine, FaCode, FaServer } from 'react-icons/fa';
+import { FaRocket, FaUsers, FaChartLine, FaCode} from 'react-icons/fa';
 import { GiSpinningBlades, GiCommercialAirplane } from 'react-icons/gi';
 import softwareimage from '../../src/serviceImages/aboutfolder/softwaresolution.jpg'
 
 const AboutSecondSection = () => {
   const [activeTab, setActiveTab] = useState('mission');
-  const [hoveredImage, setHoveredImage] = useState(null);
+  // const [hoveredImage, setHoveredImage] = useState(null);
 
   // Sample gallery images (replace with your actual images)
   const galleryImages = [
