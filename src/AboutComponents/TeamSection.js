@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
+
 import { GiSpinningBlades, GiCommercialAirplane } from 'react-icons/gi';
 
 const TeamSection = () => {
