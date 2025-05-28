@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./Home"
+import About from "./AboutComponents/About";
+import WebDevelopment from "./webDevelopment/webDevelopment";
+import AppDevelopment from "./appDevelopment/AppDevelopment";
+import SoftwareDevelopment from "./SoftwareDevelopment/softwareDevelopment";
+import WebDesign from "./WebDesign/webDesign";
+import UiUxdDevelopment from "./UiUxDesign/UiUxDevelopment";
+import Contact from "./contactComponents/contact";
+import SEO from "./marketing/SEO/SEO";
+import SocialMediaMarketing from "./marketing/socialMediaMarketing/socialMediaMarketing";
+import ContentMarketing from "./marketing/contentMarketing/contentMarketing";
+import LogoDesign from "./marketing/logoDesign/logoDesign";
+import DigitalMarketing from "./marketing/digitalMarketing/digitalMarketing";
+import FAQPage from "./pages/faqs";
+import PrivacyPolicy from "./pages/privacypolacy";
+import TermsAndConditions from "./pages/termsandconditions";
+export default function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/webdevelopment" element={<WebDevelopment/>} />
+                <Route path="/appdevelopment" element={<AppDevelopment/>} />
+                <Route path="/softwaredevelopment" element={<SoftwareDevelopment/>} />
+                <Route path="/webdesign" element={<WebDesign />}/>
+                <Route path="/uiuxdesign" element={<UiUxdDevelopment/>} />
+                <Route path="/seo" element={<SEO />}/>
+                <Route path="/socialmediamarketing" element={<SocialMediaMarketing/>} />
+                <Route path="/contentmarketing" element={<ContentMarketing/>}/>
+                <Route path="/logodesign" element={<LogoDesign />} />
+                <Route path="/digitalmarketing" element={<DigitalMarketing />}/>
+
+                <Route path="/faqs" element={<FAQPage />}/>
+                <Route path="/privacy" element={<PrivacyPolicy />}/>
+                  <Route path="/termsandconditions" element={<TermsAndConditions/>}/>
+            </Routes>
+        </BrowserRouter>
+    );
 }
-
-export default App;
