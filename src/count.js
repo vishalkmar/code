@@ -121,6 +121,16 @@ const StatsSection = () => {
 
       <div className="container position-relative py-5" style={{ zIndex: 1 }}>
         <div className="row g-4 justify-content-center">
+           <h2 className="fw-bold mb-3 text-center speek" style={{
+              // background: 'linear-gradient(90deg, #4facfe 0%, #00f2fe 100%)',
+              background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              fontSize:'5rem',
+              fontFamily:'orbitron'
+            }}>
+             Stats That Speak Success
+            </h2>
           {stats.map((stat, index) => (
             <div key={stat.id} className="col-12 col-sm-6 col-md-3">
               <div className="card h-100 border-0 position-relative overflow-hidden" style={{
@@ -218,6 +228,9 @@ const StatsSection = () => {
           .display-4 {
             font-size: 2.5rem;
           }
+            .speek{
+               font-size: 2.5rem;
+            }
           
           .card {
             min-height: 200px !important;
@@ -228,6 +241,10 @@ const StatsSection = () => {
           .display-4 {
             font-size: 2rem;
           }
+             .speek{
+               font-size: 2.5rem;
+            }
+          
         }
       `}</style>
     </section>

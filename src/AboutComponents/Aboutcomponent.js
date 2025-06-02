@@ -4,18 +4,25 @@ import { FaRocket, FaUsers, FaChartLine, FaCode} from 'react-icons/fa';
 import { GiSpinningBlades, GiCommercialAirplane } from 'react-icons/gi';
 import softwareimage from '../../src/serviceImages/aboutfolder/softwaresolution.jpg'
 
+import galone from '.././serviceImages/app/galone.jpg'
+import galtwo from '.././serviceImages/app/galtwo.jpg'
+import galthree from '.././serviceImages/app/galthree.jpg'
+import galfour from '.././serviceImages/app/galfour.jpg'
+import galfive from '.././serviceImages/app/galfive.jpg'
+import galsix from '.././serviceImages/app/galsix.jpg'
+
 const AboutSecondSection = () => {
   const [activeTab, setActiveTab] = useState('mission');
   // const [hoveredImage, setHoveredImage] = useState(null);
 
   // Sample gallery images (replace with your actual images)
   const galleryImages = [
-    { id: 1, src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80', alt: 'Our Team Working' },
-    { id: 2, src: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80', alt: 'Office Environment' },
-    { id: 3, src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80', alt: 'Team Meeting' },
-    { id: 4, src: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80', alt: 'Coding Session' },
-    { id: 5, src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80', alt: 'Project Discussion' },
-    { id: 6, src: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80', alt: 'Celebration' }
+    { id: 1, src:galone, alt: 'Our Team Working' },
+    { id: 2, src:galtwo, alt: 'Office Environment' },
+    { id: 3, src:galthree, alt: 'Team Meeting' },
+    { id: 4, src:galfour, alt: 'Coding Session' },
+    { id: 5, src:galfive, alt: 'Project Discussion' },
+    { id: 6, src:galsix, alt: 'Celebration' }
   ];
 
   const stats = [
@@ -252,7 +259,7 @@ const AboutSecondSection = () => {
                       // opacity: hoveredImage === image.id ? 1 : 0,
                       transition: 'opacity 0.3s ease'
                     }}>
-                      <span className="text-white">View Project</span>
+                    
                     </div>
                   </div>
                 </div>

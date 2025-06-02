@@ -5,6 +5,10 @@ import  {Link} from 'react-router-dom'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+// const [openDropdown, setOpenDropdown] = useState(null);
+// const toggleDropdown = (menuName) => {
+//   setOpenDropdown(openDropdown === menuName ? null : menuName);
+// };
 
   return (
     <header>
@@ -12,7 +16,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-dark h-auto" style={{
         background: 'linear-gradient(135deg, #0a1a2e 0%, #1a3a6a 100%)',
         boxShadow: '0 2px 15px rgba(0, 119, 255, 0.3)',
-        padding: '0.8rem 5%'
+        padding: '0.8rem 5%',
       }}>
         <div className="container-fluid" style={{
           maxWidth: '1400px',
@@ -410,7 +414,9 @@ const Header = () => {
                   color: 'rgba(255, 255, 255, 0.9)',
                   padding: '0.75rem 0',
                   borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                    fontFamily:'orbitron'
+                    fontFamily:'orbitron',
+                    position: 'relative', 
+                    zIndex: 1100 
                 }}
               >
                 Pages
@@ -420,9 +426,11 @@ const Header = () => {
                 }}></i>
               </Link>
               <ul className="dropdown-menu" style={{
-                background: 'rgba(0, 0, 0, 0.2)',
+                 background: 'linear-gradient(135deg, #0a1a2e 0%, #1a3a6a 100%)',
                 border: 'none',
-                marginLeft: '1rem'
+                marginLeft: '1rem',
+                  zIndex: 5000,           // Bootstrap dropdown default z-index is 1050, use this or higher
+    position: 'absolute'
               }}>
                 <li><Link className="dropdown-item" to="/privacy" onClick={() => setMobileMenuOpen(false)} style={{
                   color: 'rgba(255, 255, 255, 0.8)',
@@ -454,6 +462,7 @@ const Header = () => {
                   padding: '0.75rem 0',
                   borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
                     fontFamily:'orbitron'
+                  
                 }}
               >
                 Services
@@ -463,9 +472,11 @@ const Header = () => {
                 }}></i>
               </Link>
               <ul className="dropdown-menu" style={{
-                background: 'rgba(0, 0, 0, 0.2)',
+               
                 border: 'none',
-                marginLeft: '1rem'
+                marginLeft: '1rem',
+                  background: 'linear-gradient(135deg, #0a1a2e 0%, #1a3a6a 100%)'
+               
               }}>
                 <li><Link className="dropdown-item" to="/webdevelopment" onClick={() => setMobileMenuOpen(false)} style={{
                   color: 'rgba(255, 255, 255, 0.8)',
@@ -516,9 +527,10 @@ const Header = () => {
                 }}></i>
               </Link>
               <ul className="dropdown-menu" style={{
-                background: 'rgba(0, 0, 0, 0.2)',
+               
                 border: 'none',
-                marginLeft: '1rem'
+                marginLeft: '1rem',
+                 background: 'linear-gradient(135deg, #0a1a2e 0%, #1a3a6a 100%)'
               }}>
                 <li><Link className="dropdown-item" to="/digitalmarketing" onClick={() => setMobileMenuOpen(false)} style={{
                   color: 'rgba(255, 255, 255, 0.8)',

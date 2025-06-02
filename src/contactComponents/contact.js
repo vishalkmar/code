@@ -1,11 +1,15 @@
 // import VismeContactForm from "./cont"
 
+import Header from "../header"
+import Footer from "../footer"
+import ContactUsBanner from "./contactbanner"
 
 export default function Contact(){
      return(
             <>
-               {/* <VismeContactForm/> */}
-               
+            <Header/>
+            <ContactUsBanner/>
+            <Footer/>
             </>
      )
 }

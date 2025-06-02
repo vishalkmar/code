@@ -1,6 +1,7 @@
 import React, { useState, useEffect ,useMemo } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import webdesignbanner from '../serviceImages/software/webdesign.jpg'; // Replace with your actual Web Design banner image path
+// import webdesignbanner from  '../serviceImages/software/webdesigntwo.jpg'
 
 const HeroWebDesignBanner = () => {
   const [text, setText] = useState('');
