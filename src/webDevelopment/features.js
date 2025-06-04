@@ -69,7 +69,7 @@ const FeatureSection = () => {
       <div className="container py-5">
         <div className="row mb-5">
           <div className="col-12 text-center">
-            <h2 className="display-4 fw-bold mb-3" style={{
+            <h2 className="display-4 text-center fw-bold mb-3" style={{
               // background: 'linear-gradient(90deg, #4facfe 0%, #00f2fe 100%)',
               background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
               WebkitBackgroundClip: 'text',

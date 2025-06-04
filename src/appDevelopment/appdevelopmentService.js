@@ -81,13 +81,18 @@ const AppDevelopmentServices = () => {
             color: white;
             background-color: #0d6efd;
           }
+             @media (max-width: 575.98px) {
+          .responsive-text {
+            font-size: 3.5rem !important;
+          }
+        }
         `}
       </style>
     
     <div className='container-fluid'  style={{background: 'linear-gradient(135deg, #0a1a2e 0%, #1a3a6a 100%)'}}>
       <div className="container py-5">
         <div className="text-center mb-5">
-          <h2 className="display-5 fw-bold" style={{fontFamily:'orbitron',fontSize:'4rem',color:'white'}}>Our <span className="" style={{ background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
+          <h2 className="display-5 fw-bold responsive-text" style={{fontFamily:'orbitron',fontSize:'4rem',color:'white'}}>Our <span className="" style={{ background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',}} >App Development</span> Expertise</h2>
           <p className="lead text-muted">Custom mobile solutions for every industry need</p>
