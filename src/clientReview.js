@@ -11,7 +11,7 @@ const ClientReviews = () => {
     {
       id: 1,
       name: "Rahul Sharma",
-      company: "TechSolutions Pvt Ltd",
+  
       review: "Their software development team delivered exceptional results. The app they built increased our customer engagement by 40% within just 3 months.",
       rating: 5,
       image: "https://randomuser.me/api/portraits/men/32.jpg"
@@ -19,7 +19,6 @@ const ClientReviews = () => {
     {
       id: 2,
       name: "Priya Patel",
-      company: "Digital Marketing Pro",
       review: "The SEO strategies implemented by this team tripled our organic traffic. Their attention to detail and regular reporting is impressive.",
       rating: 5,
       image: "https://randomuser.me/api/portraits/women/44.jpg"
@@ -27,7 +26,6 @@ const ClientReviews = () => {
     {
       id: 3,
       name: "Amit Singh",
-      company: "E-Commerce Ventures",
       review: "Our website redesign has significantly reduced bounce rates. The team understood our vision perfectly and executed it flawlessly.",
       rating: 4,
       image: "https://randomuser.me/api/portraits/men/67.jpg"
@@ -35,7 +33,6 @@ const ClientReviews = () => {
     {
       id: 4,
       name: "Neha Gupta",
-      company: "StartUp Innovations",
       review: "The mobile app they developed exceeded our expectations. User feedback has been overwhelmingly positive with 4.9/5 rating on Play Store.",
       rating: 5,
       image: "https://randomuser.me/api/portraits/women/63.jpg"
@@ -43,7 +40,6 @@ const ClientReviews = () => {
     {
       id: 5,
       name: "Vikram Joshi",
-      company: "Global Enterprises",
       review: "Their team's technical expertise and professionalism made our digital transformation seamless. Highly recommended for complex projects.",
       rating: 5,
       image: "https://randomuser.me/api/portraits/men/81.jpg"
@@ -51,7 +47,6 @@ const ClientReviews = () => {
     {
       id: 6,
       name: "Sonia Verma",
-      company: "AI Dynamics",
       review: "Thanks to their branding and UI services, our platform looks stunning and modern. We’ve received great feedback from our users.",
       rating: 5,
       image: "https://randomuser.me/api/portraits/women/61.jpg"

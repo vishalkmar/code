@@ -2,9 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { GiSpinningBlades, GiCommercialAirplane, GiAbstract024 } from 'react-icons/gi';
 import { useNavigate } from 'react-router-dom';
-const AboutBanner = () => {
 
-     const navigate = useNavigate();
+const AboutBanner = () => {
+  const navigate = useNavigate();
+
   // Flying objects data
   const flyingObjects = [
     { id: 1, icon: <GiCommercialAirplane />, size: '3rem', top: '20%', left: '5%', animation: 'flyRight 15s linear infinite' },
@@ -15,8 +16,8 @@ const AboutBanner = () => {
 
   return (
     <section className="position-relative overflow-hidden" style={{
-      height: '80vh',
-      minHeight: '600px',
+      minHeight: '100vh',
+      padding: '4rem 0',
       background: 'linear-gradient(135deg, rgba(10, 26, 46, 0.9) 0%, rgba(26, 58, 106, 0.9) 100%)',
       display: 'flex',
       alignItems: 'center'
@@ -41,11 +42,11 @@ const AboutBanner = () => {
         opacity: 0.5
       }}></div>
 
-      <div className="container position-relative z-index-1 py-5">
+      <div className="container position-relative z-index-1 py-3 py-md-5">
         <div className="row">
           <div className="col-12 col-lg-8 mx-auto text-center">
             {/* Main Heading with Animation */}
-            <h1 className="display-3 fw-bold mb-4" style={{
+            <h1 className="display-3 fw-bold mb-3 mb-md-4" style={{
               background: 'linear-gradient(90deg, #4facfe 0%, #00f2fe 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -54,34 +55,33 @@ const AboutBanner = () => {
               lineHeight: '1.2'
             }}>
               <span className="d-block" style={{ animation: 'fadeInUp 1s ease' }}>Innovating Since 2023</span>
-              <span className="d-block mt-3" style={{ 
-                fontSize: '4.8rem',
-                 background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
-                // background: 'linear-gradient(90deg, #4facfe 0%, #00f2fe 100%)',
+              <span className="d-block mt-2 mt-md-3" style={{ 
+                fontSize: 'clamp(2.5rem, 8vw, 4.8rem)',
+                background: 'linear-gradient(90deg, rgb(242, 244, 247) 0%, #00f2fe 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 textShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
                 animation: 'fadeInUp 1s ease 0.3s forwards',
-                fontFamily:'orbitron'
+                fontFamily: 'orbitron'
               }}>
                 About Our Company
               </span>
             </h1>
 
             {/* Animated Subheading */}
-            <p className="lead mb-5 mx-auto" style={{
+            <p className="lead mb-4 mb-md-5 mx-auto" style={{
               color: 'rgba(255, 255, 255, 0.8)',
               maxWidth: '700px',
               animation: 'fadeInUp 1s ease 0.6s forwards',
               opacity: 0,
-              fontSize: '1.5rem'
+              fontSize: 'clamp(1.1rem, 3vw, 1.5rem)'
             }}>
               Pioneering digital transformation through cutting-edge technology solutions and unparalleled expertise.
             </p>
 
             {/* Animated Button */}
             <div style={{ animation: 'fadeInUp 1s ease 0.9s forwards', opacity: 0 }}>
-              <button  className="btn btn-lg px-5 py-3" style={{
+              <button className="btn btn-lg px-4 px-md-5 py-2 py-md-3" style={{
                 background: 'linear-gradient(90deg, #4facfe 0%, #00f2fe 100%)',
                 border: 'none',
                 borderRadius: '50px',
@@ -90,15 +90,15 @@ const AboutBanner = () => {
                 boxShadow: '0 5px 25px rgba(79, 172, 254, 0.4)',
                 position: 'relative',
                 overflow: 'hidden'
-              }} onClick={()=>{
-                 navigate('/');
+              }} onClick={() => {
+                navigate('/');
               }}>
                 <span className="position-relative z-index-1">Explore Our Journey</span>
                 <span className="position-absolute top-0 left-0 w-100 h-100" style={{
                   background: 'rgba(255, 255, 255, 0.2)',
                   transform: 'translateX(-100%)',
                   transition: 'transform 0.3s ease',
-                  fontFamily:'orbitron'
+                  fontFamily: 'orbitron'
                 }}></span>
               </button>
             </div>
@@ -107,7 +107,7 @@ const AboutBanner = () => {
       </div>
 
       {/* Scrolling Arrow Indicator */}
-      <div className="position-absolute bottom-0 start-50 translate-x-50 mb-5" style={{
+      <div className="position-absolute bottom-0 start-50 translate-x-50 mb-4 mb-md-5" style={{
         animation: 'bounce 2s infinite',
         zIndex: 1
       }}>
@@ -176,50 +176,6 @@ const AboutBanner = () => {
         
         .z-index-1 {
           z-index: 1;
-        }
-        
-        @media (max-width: 992px) {
-          .display-3 {
-            font-size: 3.5rem;
-          }
-          
-          .display-3 span.d-block {
-            font-size: 4rem !important;
-          }
-        }
-        
-        @media (max-width: 768px) {
-          section {
-            height: 70vh !important;
-            min-height: 500px !important;
-          }
-          
-          .display-3 {
-            font-size: 2.5rem;
-          }
-          
-          .display-3 span.d-block {
-            font-size: 3rem !important;
-          }
-          
-          .lead {
-            font-size: 1.2rem !important;
-          }
-        }
-        
-        @media (max-width: 576px) {
-          section {
-            height: 60vh !important;
-            min-height: 400px !important;
-          }
-          
-          .display-3 {
-            font-size: 2rem;
-          }
-          
-          .display-3 span.d-block {
-            font-size: 2.2rem !important;
-          }
         }
       `}</style>
     </section>

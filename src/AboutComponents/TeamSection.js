@@ -8,49 +8,43 @@ const TeamSection = () => {
     {
       id: 1,
       name: "Rahul Sharma",
-    //   role: "CEO & Founder",
       bio: "Technology visionary with 15+ years of experience in software development and business strategy.",
       image: "https://randomuser.me/api/portraits/men/32.jpg"
     },
     {
       id: 2,
       name: "Priya Patel",
-    //   role: "CTO",
       bio: "Expert in scalable architecture and leading engineering teams to build robust solutions.",
       image: "https://randomuser.me/api/portraits/women/44.jpg"
     },
     {
       id: 3,
       name: "Amit Singh",
-    //   role: "Lead Developer",
       bio: "Full-stack developer specializing in React, Node.js, and cloud infrastructure.",
       image: "https://randomuser.me/api/portraits/men/67.jpg"
     },
     {
       id: 4,
       name: "Neha Gupta",
-    //   role: "UX Designer",
       bio: "Creative designer focused on creating intuitive user experiences and beautiful interfaces.",
       image: "https://randomuser.me/api/portraits/women/63.jpg"
     },
     {
       id: 5,
       name: "Vikram Joshi",
-    //   role: "DevOps Engineer",
       bio: "Infrastructure specialist automating deployments and optimizing cloud environments.",
       image: "https://randomuser.me/api/portraits/men/81.jpg"
     },
     {
       id: 6,
       name: "Ananya Reddy",
-    //   role: "Product Manager",
       bio: "Bridges business needs with technical solutions to deliver exceptional products.",
       image: "https://randomuser.me/api/portraits/women/68.jpg"
     }
   ];
 
   return (
-    <section className="py-5 position-relative overflow-hidden" style={{
+    <section className="py-5 h-auto position-relative overflow-hidden" style={{
       background: 'linear-gradient(135deg, #0a1a2e 0%, #1a3a6a 100%)'
     }}>
       {/* Flying Objects */}
@@ -91,7 +85,10 @@ const TeamSection = () => {
 
         <div className="row g-4">
           {teamMembers.map(member => (
-            <div key={member.id} className="col-12 col-md-6 col-lg-4">
+            <div 
+              key={member.id} 
+              className="col-6 col-lg-4"  // col-6 = 2 cols below 992px, col-lg-4 = 3 cols ≥992px
+            >
               <div className="team-card position-relative overflow-hidden rounded" style={{
                 height: '450px',
                 cursor: 'pointer'
@@ -108,7 +105,6 @@ const TeamSection = () => {
                   transition: 'all 0.3s ease'
                 }}>
                   <h5 className="text-white mb-1" style={{fontFamily:'orbitron',fontSize:'1.5rem'}}>{member.name}</h5>
-                  {/* <p className="text-white-50 small mb-0">{member.role}</p> */}
                 </div>
                 
                 {/* Hover Overlay */}
@@ -119,9 +115,7 @@ const TeamSection = () => {
                   transform: 'translateY(100%)'
                 }}>
                   <h5 className="text-white mb-2">{member.name}</h5>
-                  <p className="text-white-50 small mb-3">{member.role}</p>
                   <p className="text-white mb-4">{member.bio}</p>
-                 
                 </div>
               </div>
             </div>
@@ -159,28 +153,26 @@ const TeamSection = () => {
         
         @media (max-width: 992px) {
           .team-card {
-            height: 300px !important;
+            height: 350px !important;
           }
         }
         
         @media (max-width: 768px) {
+          .team-card {
+            height: 320px !important;
+          }
           .display-4 {
             font-size: 2.5rem;
-          }
-          
-          .team-card {
-            height: 280px !important;
           }
         }
         
         @media (max-width: 576px) {
+          .team-card {
+            height: 280px !important;
+          }
           .display-4 {
             font-size: 2rem;
           }
-          
-          // .team-card {
-          //   height: 250px !important;
-          // }
         }
       `}</style>
     </section>

@@ -332,6 +332,7 @@ const AboutSecondSection = () => {
           }
         }
       `}</style>
+     
     </section>
   );
 };
