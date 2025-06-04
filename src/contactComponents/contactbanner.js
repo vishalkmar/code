@@ -21,7 +21,7 @@ const [data,setData] = useState({
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-   const res = await fetch("/.netlify/functions/sendEmail", {
+   const res = await fetch(apiUrl, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
