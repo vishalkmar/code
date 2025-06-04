@@ -8,7 +8,8 @@ import { toast } from 'react-toastify';
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactUsBanner = () => {
-const apiUrl = process.env.REACT_APP_API_URL;
+const apiUrl = "/.netlify/functions/sendEmail/sendEmail";
+
 
 const [data,setData] = useState({
      name:"",
@@ -20,10 +21,14 @@ const [data,setData] = useState({
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await fetch(apiUrl, {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
+   const res = await fetch("/.netlify/functions/sendEmail", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(data),
+});
+
 
     const result = await res.json();
 

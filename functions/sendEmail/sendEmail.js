@@ -8,14 +8,14 @@ exports.handler = async (event) => {
       port:465,
       secure: true,
       auth: {
-        user:process.env.EMAIL_USER , // Gmail email from environment variable
-        pass:process.env.EMAIL_PASS, // Gmail app password from environment variable
+        user:'websiteemailxx@gmail.com', // Gmail email from environment variable
+        pass:'kzmi kqsu vztr sjzz', // Gmail app password from environment variable
       },
     });
 
   const mailOptions = {
       from: email, // sender's email (from request body)
-      to: process.env.MY_MAIL, // receiver's email
+      to: 'vk722413@gmail.com', // receiver's email
       subject: "Raise Query to Build Software", // email subject
       html: `
       <p><strong>Name:</strong> ${name}</p>
