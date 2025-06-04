@@ -395,7 +395,7 @@ const Header = () => {
         <div className="offcanvas-body">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" to="#" onClick={() => setMobileMenuOpen(false)} style={{
+              <Link className="nav-link active" to="/" onClick={() => setMobileMenuOpen(false)} style={{
                 color: 'rgba(255, 255, 255, 0.9)',
                 padding: '0.75rem 0',
                 borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
@@ -563,7 +563,7 @@ const Header = () => {
             <li className="nav-item">
               <Link 
                 className="nav-link" 
-                href="/about"
+                to="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 style={{
                   color: 'rgba(255, 255, 255, 0.9)',
