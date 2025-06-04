@@ -547,7 +547,7 @@ const Header = () => {
                   padding: '0.5rem 1rem',
                     fontFamily:'orbitron'
                 }}>Content Marketing</Link></li>
-                <li><Link className="dropdown-item" to="seo" onClick={() => setMobileMenuOpen(false)} style={{
+                <li><Link className="dropdown-item" to="/seo" onClick={() => setMobileMenuOpen(false)} style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   padding: '0.5rem 1rem',
                     fontFamily:'orbitron'

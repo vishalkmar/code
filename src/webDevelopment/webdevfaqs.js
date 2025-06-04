@@ -83,7 +83,7 @@ const WebDevelopmentFAQ = () => {
     <style>{`
         @media (max-width: 575.98px) {
           .responsive-text {
-            font-size: 3.5rem !important;
+            font-size: 2.8rem !important;
           }
         }
       `}</style>

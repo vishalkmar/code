@@ -36,10 +36,11 @@ const SocialFAQ = () => {
   }
 ];
   return (
+    <>
     <div className="container-fluid" style={{background: 'linear-gradient(135deg, #0a1a2e 0%, #1a3a6a 100%)'}}>
     <div className="container py-5">
       <div className="text-center mb-5">
-        <h2 className="display-5 fw-bold" style={{fontFamily:'orbitron',fontSize:'4.5rem' ,background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
+        <h2 className="display-5 fw-bold responsive-text" style={{fontFamily:'orbitron',fontSize:'4.5rem' ,background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent', }}>Social Media Marketing <span style={{background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
               WebkitBackgroundClip: 'text',
@@ -77,6 +78,14 @@ const SocialFAQ = () => {
       </div>
     </div>
     </div>
+       <style>{`
+        @media (max-width: 575.98px) {
+          .responsive-text {
+            font-size: 3.5rem !important;
+          }
+        }
+      `}</style>
+      </>
   );
 };
 

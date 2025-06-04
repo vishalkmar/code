@@ -11,6 +11,7 @@ const CompanyIntro = () => {
   ];
 
   return (
+    <>
     <section className="py-5" style={{ background: 'linear-gradient(135deg, #0a1a2e 0%, #1a3a6a 100%)' }}>
       <div className="container">
         
@@ -19,7 +20,7 @@ const CompanyIntro = () => {
             background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-        }} className='py-5 text-center'>Empowering Brands with Digital Excellence</h1>
+        }} className='py-5 text-center responsive-text'>Empowering Brands with Digital Excellence</h1>
         <div className="row align-items-center">
           {/* Image Grid */}
           <div className="col-lg-6 mb-4 mb-lg-0">
@@ -63,6 +64,14 @@ const CompanyIntro = () => {
         </div>
       </div>
     </section>
+     <style>{`
+        @media (max-width: 575.98px) {
+          .responsive-text {
+            font-size: 2.8rem !important;
+          }
+        }
+      `}</style>
+      </>
   );
 };
 

@@ -90,13 +90,14 @@ const ServicesSection = () => {
 
   ];
   return (
+    <>
     <section className="py-5" style={{
      background: 'linear-gradient(135deg, #0a1a2e 0%, #1a3a6a 100%)'
     }}>
       <div className="container py-5">
         <div className="row mb-5">
           <div className="col-12 text-center">
-            <h2 className="display-4 fw-bold mb-3" style={{
+            <h2 className="display-4 fw-bold mb-3 responsive-text" style={{
               // background: 'linear-gradient(90deg, #4facfe 0%, #00f2fe 100%)',
               background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
               WebkitBackgroundClip: 'text',
@@ -176,6 +177,14 @@ const ServicesSection = () => {
         </div>
       </div>
     </section>
+     <style>{`
+        @media (max-width: 575.98px) {
+          .responsive-text {
+            font-size: 3.5rem !important;
+          }
+        }
+      `}</style>
+      </>
   );
 };
 

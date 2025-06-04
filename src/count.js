@@ -123,7 +123,7 @@ const StatsSection = () => {
 
       <div className="container position-relative py-5" style={{ zIndex: 1 }}>
         <div className="row g-4 justify-content-center">
-           <h2 className="fw-bold mb-3 text-center speek" style={{
+           <h2 className="fw-bold mb-3 text-center  display-4" style={{
               // background: 'linear-gradient(90deg, #4facfe 0%, #00f2fe 100%)',
               background: 'linear-gradient(90deg,rgb(242, 244, 247) 0%, #00f2fe 100%)',
               WebkitBackgroundClip: 'text',
@@ -228,11 +228,9 @@ const StatsSection = () => {
         
         @media (max-width: 768px) {
           .display-4 {
-            font-size: 2.5rem;
+            font-size: 3.5rem !important;
           }
-            .speek{
-               font-size: 2.5rem;
-            }
+           
           
           .card {
             min-height: 200px !important;
@@ -241,11 +239,9 @@ const StatsSection = () => {
         
         @media (max-width: 576px) {
           .display-4 {
-            font-size: 2rem;
+            font-size: 2.8rem !important;
           }
-             .speek{
-               font-size: 2.5rem;
-            }
+            
           
         }
       `}</style>
