@@ -44,25 +44,7 @@ const StatsSection = () => {
   const [animatedValues, setAnimatedValues] = useState(stats.map(() => 0));
   const [animationStarted, setAnimationStarted] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = document.getElementById('stats-section');
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-        
-        if (isVisible && !animationStarted) {
-          setAnimationStarted(true);
-          animateNumbers();
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [animationStarted]);
-
-  const animateNumbers = () => {
+    const animateNumbers = () => {
     const duration = 2000; // Animation duration in ms
     const startTime = performance.now();
 
@@ -84,6 +66,26 @@ const StatsSection = () => {
 
     requestAnimationFrame(updateNumbers);
   };
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById('stats-section');
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        
+        if (isVisible && !animationStarted) {
+          setAnimationStarted(true);
+          animateNumbers();
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [animationStarted]);
+
 
   // 3D flying objects data
   const flyingObjects = [

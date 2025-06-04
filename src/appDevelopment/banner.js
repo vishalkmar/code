@@ -8,7 +8,7 @@ const ImageBanner = ({ imageUrl }) => {
         <div className="col-12">
           <img 
             src={imageUrl} 
-            alt="Banner Image"
+            alt="App Development Banner"
             className="img-fluid w-100"
             style={{
               display: 'block',
