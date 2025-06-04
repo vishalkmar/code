@@ -83,7 +83,7 @@ const AppDevelopmentServices = () => {
           }
              @media (max-width: 575.98px) {
           .responsive-text {
-            font-size: 2.8rem !important;
+            font-size: 3rem !important;
           }
         }
         `}

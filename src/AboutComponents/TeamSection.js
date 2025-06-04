@@ -178,9 +178,9 @@ const TeamSection = () => {
             font-size: 2rem;
           }
           
-          .team-card {
-            height: 250px !important;
-          }
+          // .team-card {
+          //   height: 250px !important;
+          // }
         }
       `}</style>
     </section>
